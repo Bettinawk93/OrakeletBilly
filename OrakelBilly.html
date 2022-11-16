@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orakelet Billy</title>
+    <h1>Orakelet Billy</h1>
+    <style>
+        body{
+
+            background: url("Billy2.jpg") no-repeat center fixed;
+            background-size: cover;
+           
+         
+        }
+
+        #output{
+            color:rgb(81, 4, 42);
+            font-size 20px;
+            margin-left:80%;
+            margin-top:5%;
+        }
+
+        #questionInput{
+            width:300px;
+            margin-top:30%;
+        }
+    </style>
+    
+</head>
+<body>
+    <input id="questionInput"   type="text" placeholder="Still Orakelet Billy spørsmål"  onkeydown="if(event.keyCode === 13)getAnswer()">
+    <div id="output">
+
+    </div>
+
+    <script>
+         const outputDiv=document.getElementById('output');
+         const qInput=document.getElementById('questionInput');
+         const answerArray=["Boff-boff.","Gi meg mat.","vær rolig.", "Huggalt.", "Tisst.", "Tull.", "Rolig.",];
+         let randomAnswer;
+
+         function getAnswer(){
+            let randomIndex = Math.floor(Math.random()* answerArray.length -1 );
+            if(qInput.value == "gi meg bein"){
+                outputDiv.innerHTML = answerArray[6];
+            }
+
+            else {
+                outputDiv.innerHTML = answerArray[randomIndex];
+            }
+         }
+
+    </script>      
+   </body>
+   </html>
